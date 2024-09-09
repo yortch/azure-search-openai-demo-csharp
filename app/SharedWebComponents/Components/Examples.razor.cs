@@ -7,9 +7,9 @@ public sealed partial class Examples
     [Parameter, EditorRequired] public required string Message { get; set; }
     [Parameter, EditorRequired] public EventCallback<string> OnExampleClicked { get; set; }
 
-    private string WhatIsIncluded { get; } = "What is included in my Northwind Health Plus plan that is not in standard?";
-    private string WhatIsPerfReview { get; } = "What happens in a performance review?";
-    private string WhatDoesPmDo { get; } = "What does a Product Manager do?";
+    private string WhatIsIncluded { get; } = "Who who the Marathon in the 2024 Olympics?";
+    private string WhatIsPerfReview { get; } = "Which country won the most medals in the Paris Olympics?";
+    private string WhatDoesPmDo { get; } = "Which records were broken in the last Olympics?";
 
     private async Task OnClickedAsync(string exampleText)
     {

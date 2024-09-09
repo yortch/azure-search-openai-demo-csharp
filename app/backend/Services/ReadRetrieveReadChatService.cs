@@ -125,7 +125,7 @@ standard plan AND dental AND employee benefit.
         // step 3
         // put together related docs and conversation history to generate answer
         var answerChat = new ChatHistory(
-            "You are a system assistant who helps the company employees with their questions. Be brief in your answers");
+            "You are an AI assistant who helps answer questions about the 2024 Summer Olympics.");
 
         // add chat history
         foreach (var message in history)
