@@ -46,9 +46,10 @@ description: A csharp sample app that chats with your data using OpenAI and AI S
   - [Enabling Application Insights](#enabling-optional-features)
   - [Enabling authentication](#enabling-authentication)
   - [Enable GPT-4V support](#enable-gpt-4v-support)
-- [Productionizing](#productionizing)
-- [Resources](#resources)
-- [FAQ](#faq)
+- [Guidance](#guidance) 
+  - [Productionizing](#productionizing)
+  - [Resources](#resources)
+  - [FAQ](#faq)
 
 # ChatGPT + Enterprise data with Azure OpenAI and Azure AI Search (.NET)
 
@@ -166,7 +167,7 @@ Then, run the following commands to get the project on your local environment:
 Execute the following command, if you don't have any pre-existing Azure services and want to start from a fresh deployment.
 
 1. Run `azd up` - This will provision Azure resources and deploy this sample to those resources, including building the search index based on the files found in the `./data` folder.
-   - For the target location, the regions that currently support the model used in this sample are **East US** or **Sweden Central**. For an up-to-date list of regions and models, check [here](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models)
+   - For the target location, the regions that currently support the model used in this sample are **East US**. For an up-to-date list of regions and models, check [here](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models)
    - If you have access to multiple Azure subscriptions, you will be prompted to select the subscription you want to use. If you only have access to one subscription, it will be selected automatically.
 
    > **Note**:
@@ -346,7 +347,11 @@ azd down --purge
 azd env set AZD_PREPDOCS_RAN false # This is to ensure that the documents are re-indexed with the new fields.
 ```
 
-## Productionizing
+## Guidance
+
+Besides the tips below, you can find extensive documentation in the [docs](./docs) folder.
+
+### Productionizing
 
 This sample is designed to be a starting point for your own production application,
 but you should do a thorough review of the security and performance before deploying
@@ -366,7 +371,7 @@ to production. Here are some things to consider:
 
 - **Loadtesting**: We recommend running a loadtest for your expected number of users.
 
-## Resources
+### Resources
 
 - [Revolutionize your Enterprise Data with ChatGPT: Next-gen Apps w/ Azure OpenAI and Azure AI Search](https://aka.ms/entgptsearchblog)
 - [Azure AI Search](https://learn.microsoft.com/azure/search/search-what-is-azure-search)
